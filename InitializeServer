@@ -1,3 +1,1 @@
-set_require_domain("https://github.com/Aahashii/DeadlineModAhshi/blob/main")
-require("vipcommand2.lua")
-set_require_domain("")
+require("https://raw.githubusercontent.com/Aahashii/DeadlineModAhshi/refs/heads/main/vipcommand2.lua")
