@@ -116,7 +116,7 @@ commands = {
 		end
 	end,
         loadjjs = function()
-		 require("https://deadlinegame.com/api/mod/get/e8809ec4-90af-4fce-a2e3-29501977410f")
+		 require("https://raw.githubusercontent.com/Aahashii/DeadlineModAhshi/refs/heads/main/JJSMap")
 	end,
         setjjs = function()
         map.set_map('JJS')
