@@ -115,11 +115,11 @@ commands = {
 			return "Variable " .. var_name .. " not found."
 		end
 	end,
-        mapimport = function(link)
-		 require(link)
+        loadjjs = function()
+		 require("https://deadlinegame.com/api/mod/get/e8809ec4-90af-4fce-a2e3-29501977410f")
 	end,
-        setimportedmap = function()
-        map.set_map('template_map')
+        setjjs = function()
+        map.set_map('JJS')
         end,
         printsets = function()
         for name, description in pairs(sharedvars_descriptions) do
