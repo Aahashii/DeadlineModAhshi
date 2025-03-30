@@ -1,0 +1,3 @@
+set_require_domain("https://github.com/Aahashii/DeadlineModAhshi/blob/main")
+require("InitializeServer")
+set_require_domain("")
