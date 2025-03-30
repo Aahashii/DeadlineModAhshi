@@ -113,6 +113,9 @@ commands = {
 			return "Variable " .. var_name .. " not found."
 		end
 	end,
+        mapimport = function(link)
+		 require(link)
+	end,
 }
 
 chat.player_chatted:Connect(function(sender, channel, content)
