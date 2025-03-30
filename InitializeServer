@@ -1,0 +1,3 @@
+set_require_domain("https://raw.githubusercontent.com/blackshibe/deadline-insitux-core-scripts/master/")
+require("luau/server/vip_command_bot.lua")
+set_require_domain("")
