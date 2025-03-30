@@ -95,8 +95,10 @@ commands = {
 	ban = function(name, sender)
 		for _, p in pairs(resolve_player(name, sender)) do p.ban_from_server() end
 	end,
-	refill = function()
-		for _, p in pairs(players.get_all()) do p.refill_ammo() end
+	refill = function(args, sender)
+                local args_split = args:split(" ")
+		local players_list = resolve_player(args_split[1], sender)
+		for _, p in pairs(players_list) do p.refill_ammo() end
 	end,
 	lag = function(fps)
 		sharedvars.dbg_limit_fps = true
@@ -116,6 +118,14 @@ commands = {
         mapimport = function(link)
 		 require(link)
 	end,
+        setimportedmap = function()
+        map.set_map('template_map')
+        end,
+        printsets = function()
+        for name, description in pairs(sharedvars_descriptions) do
+    print(name, description) --> prints every sharedvars value
+end
+        end,
 }
 
 chat.player_chatted:Connect(function(sender, channel, content)
