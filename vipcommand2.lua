@@ -115,11 +115,11 @@ commands = {
 			return "Variable " .. var_name .. " not found."
 		end
 	end,
-        loadjjs = function()
+        loadmod = function()
 		 require("https://raw.githubusercontent.com/Aahashii/DeadlineModAhshi/refs/heads/main/JJSMap")
 	end,
-        setjjs = function()
-        map.set_map('JJS')
+        setmodmap = function(string)
+        map.set_map(string)
         end,
         printsets = function()
         for name, description in pairs(sharedvars_descriptions) do
