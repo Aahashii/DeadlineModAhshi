@@ -126,6 +126,9 @@ commands = {
     print(name, description) --> prints every sharedvars value
 end
         end,
+	gamemode = function(setgm)
+		gamemode.force_set_gamemode(setgm)
+	end,
 }
 
 chat.player_chatted:Connect(function(sender, channel, content)
