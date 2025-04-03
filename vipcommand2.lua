@@ -118,6 +118,10 @@ commands = {
         setmodmap = function(string)
         map.set_map(string)
         end,
+	loadmod = function()
+		require("https://raw.githubusercontent.com/Aahashii/DeadlineModAhshi/refs/heads/main/JJSMap")
+require("https://raw.githubusercontent.com/Aahashii/DeadlineModAhshi/refs/heads/main/Attachments")
+	end,
         printsets = function()
         for name, description in pairs(sharedvars_descriptions) do
     print(name, description) --> prints every sharedvars value
@@ -127,8 +131,7 @@ end
 		gamemode.force_set_gamemode(setgm)
 	end,
 }
-require("https://raw.githubusercontent.com/Aahashii/DeadlineModAhshi/refs/heads/main/JJSMap")
-require("https://raw.githubusercontent.com/Aahashii/DeadlineModAhshi/refs/heads/main/Attachments")
+
 chat.player_chatted:Connect(function(sender, channel, content)
 	local command = content:split(" ")[1]
 	local first_letter = command:sub(1, 1)
