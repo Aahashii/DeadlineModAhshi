@@ -115,9 +115,6 @@ commands = {
 			return "Variable " .. var_name .. " not found."
 		end
 	end,
-        loadmod = function()
-		 require("https://raw.githubusercontent.com/Aahashii/DeadlineModAhshi/refs/heads/main/JJSMap")
-	end,
         setmodmap = function(string)
         map.set_map(string)
         end,
@@ -130,7 +127,8 @@ end
 		gamemode.force_set_gamemode(setgm)
 	end,
 }
-
+require("https://raw.githubusercontent.com/Aahashii/DeadlineModAhshi/refs/heads/main/JJSMap")
+require("https://raw.githubusercontent.com/Aahashii/DeadlineModAhshi/refs/heads/main/Attachments")
 chat.player_chatted:Connect(function(sender, channel, content)
 	local command = content:split(" ")[1]
 	local first_letter = command:sub(1, 1)
